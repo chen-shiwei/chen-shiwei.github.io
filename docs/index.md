@@ -1,6 +1,20 @@
 # 陈世伟 
-- Golang 多年开发经验
-- Kubernetes
-- Mysql
-- Redis
+专注一下技术
+- 语言
+    - Golang
+    - Python
+    - PHP
+    - 前端
+        - Vue
+- 容器
+    - Kubernetes
+    - Docker
+- 数据库
+    - Mysql 
+    - MongoDB
+- 中间件
+    - Kafka
+    - mqtt
+    - Elasticsearch
 - 微服务
+    - go-micro
