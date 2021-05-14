@@ -1,0 +1,1353 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>go map - buzoumei 技术学习记录</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-map" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="buzoumei 技术学习记录" class="md-header__button md-logo" aria-label="buzoumei 技术学习记录">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            buzoumei 技术学习记录
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              go map
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/context/" class="md-tabs__link md-tabs__link--active">
+        Golang
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../k8s/%E5%AE%B9%E5%99%A8%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8/" class="md-tabs__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../%E6%9E%B6%E6%9E%84/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-tabs__link">
+        架构
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../%E5%85%B6%E4%BB%96/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B%E7%9A%84%E5%B7%A5%E5%85%B7/" class="md-tabs__link">
+        其他
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%A4%8D%E5%88%B6/" class="md-tabs__link">
+        读书
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="buzoumei 技术学习记录" class="md-nav__button md-logo" aria-label="buzoumei 技术学习记录">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    buzoumei 技术学习记录
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Golang
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Golang" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Golang
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        标准包
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="标准包" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          标准包
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/context/" class="md-nav__link">
+        context
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/sync/sync.Pool/" class="md-nav__link">
+        sync.Pool
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        基础数据结构
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="基础数据结构" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          基础数据结构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          golang-map
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        golang-map
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-map" class="md-nav__link">
+    1. 什么是map？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 实现方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-go-map" class="md-nav__link">
+    3. Go 的map怎么实现的？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4keykey" class="md-nav__link">
+    4.存放key流程/如何定位key的所在位置？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-map-map" class="md-nav__link">
+    5. map 在当做函数参数时，在函数内修改影响map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-map-get" class="md-nav__link">
+    6. Map 两种get方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 扩容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8map" class="md-nav__link">
+    8.map 比较
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../golang-slice%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90/" class="md-nav__link">
+        golang-slice深度分析
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../golang%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        golang数据结构
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slice%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="md-nav__link">
+        slice浅拷贝和深拷贝
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        runtime
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="runtime" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          runtime
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runtime/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        编译原理
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runtime/%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/" class="md-nav__link">
+        逃逸分析
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../runtime/GMP%E8%B0%83%E5%BA%A6%E5%99%A8/" class="md-nav__link">
+        GMP调度器
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Kubernetes
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Kubernetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../k8s/%E5%AE%B9%E5%99%A8%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8/" class="md-nav__link">
+        容器持久化存储
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        架构
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="架构" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          架构
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9E%B6%E6%9E%84/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-nav__link">
+        项目架构设计经验
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        raft
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="raft" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          raft
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9E%B6%E6%9E%84/raft/raft/" class="md-nav__link">
+        raft
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        缓存
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="缓存" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          缓存
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
+      
+      <label class="md-nav__link" for="__nav_4_3_1">
+        redis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="redis" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          redis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../redis/%E7%BC%93%E5%AD%98/" class="md-nav__link">
+        缓存
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../redis/%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        缓存问题
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        其他
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="其他" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          其他
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%B6%E4%BB%96/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B%E7%9A%84%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        生产力工具
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        读书
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="读书" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          读书
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        数据密集型应用设计
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="数据密集型应用设计" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          数据密集型应用设计
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%A4%8D%E5%88%B6/" class="md-nav__link">
+        第五章复制
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%88%86%E5%8C%BA/" class="md-nav__link">
+        第六章分区
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%83%E7%AB%A0%E4%BA%8B%E5%8A%A1/" class="md-nav__link">
+        第七章事务
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-map" class="md-nav__link">
+    1. 什么是map？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 实现方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-go-map" class="md-nav__link">
+    3. Go 的map怎么实现的？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4keykey" class="md-nav__link">
+    4.存放key流程/如何定位key的所在位置？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-map-map" class="md-nav__link">
+    5. map 在当做函数参数时，在函数内修改影响map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-map-get" class="md-nav__link">
+    6. Map 两种get方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7. 扩容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8map" class="md-nav__link">
+    8.map 比较
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>golang-map</h1>
+                
+                <h2 id="1-map">1. 什么是map？</h2>
+<ul>
+<li>关联数组 </li>
+<li>map</li>
+<li>字典</li>
+<li>符号表<blockquote>
+<p>kv组成的抽象数据结构，key具有唯一性，支持增删改查，平均查找效率为O(1)，最差为O(n)。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="2">2. 实现方式</h2>
+<ul>
+<li>哈希查<ul>
+<li>利用hash func 分配key到bucket，主要开销在hashfunc和数组常数访问</li>
+<li>哈希表碰撞<ul>
+<li>拉链法<ul>
+<li>将bucket实现为链表，碰撞新增在链表后插入</li>
+</ul>
+</li>
+<li>链表法<ul>
+<li>碰撞在buckets数组后增加空位</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>搜索树<ul>
+<li>AVL树</li>
+<li>红黑树</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>搜索树实现的key 遍历是有序的，而哈希表示无序的。</p>
+</blockquote>
+<h2 id="3-go-map">3. Go 的map怎么实现的？</h2>
+<blockquote>
+<p>哈希查找表+链表法
+ 代码结构</p>
+</blockquote>
+<pre><code class="language-go">// A header for a Go map.
+type hmap struct {
+    // 元素个数，调用 len(map) 时，直接返回此值
+    count     int
+    flags     uint8
+    // buckets 的对数 log_2
+    B         uint8
+    // overflow 的 bucket 近似数
+    noverflow uint16
+    // 计算 key 的哈希的时候会传入哈希函数
+    hash0     uint32
+    // 指向 buckets 数组，大小为 2^B
+    // 如果元素个数为0，就为 nil
+    buckets    unsafe.Pointer
+    // 扩容的时候，buckets 长度会是 oldbuckets 的两倍
+    oldbuckets unsafe.Pointer
+    // 指示扩容进度，小于此地址的 buckets 迁移完成
+    nevacuate  uintptr
+    extra *mapextra // optional fields
+}
+
+// mapextra holds fields that are not present on all maps.
+type mapextra struct {
+    // If both key and elem do not contain pointers and are inline, then we mark bucket
+    // type as containing no pointers. This avoids scanning such maps.
+    // However, bmap.overflow is a pointer. In order to keep overflow buckets
+    // alive, we store pointers to all overflow buckets in hmap.extra.overflow and hmap.extra.oldoverflow.
+    // overflow and oldoverflow are only used if key and elem do not contain pointers.
+    // overflow contains overflow buckets for hmap.buckets.
+    // oldoverflow contains overflow buckets for hmap.oldbuckets.
+    // The indirection allows to store a pointer to the slice in hiter.
+    overflow    *[]*bmap
+    oldoverflow *[]*bmap
+
+    // nextOverflow holds a pointer to a free overflow bucket.
+    nextOverflow *bmap
+}
+
+// A bucket for a Go map.
+type bmap struct {
+    // tophash generally contains the top byte of the hash value
+    // for each key in this bucket. If tophash[0] &lt; minTopHash,
+    // tophash[0] is a bucket evacuation state instead.
+    tophash [bucketCnt]uint8
+    // Followed by bucketCnt keys and then bucketCnt elems.
+    // NOTE: packing all the keys together and then all the elems together makes the
+    // code a bit more complicated than alternating key/elem/key/elem/... but it allows
+    // us to eliminate padding which would be needed for, e.g., map[int64]int8.
+    // Followed by an overflow pointer.
+}
+</code></pre>
+<h2 id="4keykey">4.存放key流程/如何定位key的所在位置？</h2>
+<pre><code class="language-go">10010111 | 000011110110110010001111001010100010010110010101010 │ 01010
+// 最后B位为10 放在第10个bucket
+// 用hash的前8位确定放在桶中([8]keys,[8]values)的哪个位置
+</code></pre>
+<ol>
+<li>计算key hash</li>
+<li>用hash的最后B位确定存在在哪个桶([]bmap)</li>
+<li>用hash的前8位确定放在桶中([8]keys,[8]values)的哪个位置</li>
+</ol>
+<h2 id="5-map-map">5. map 在当做函数参数时，在函数内修改影响map</h2>
+<pre><code class="language-go">// makemap 返回是指针
+func makemap(t *maptype, hint int, h *hmap) *hmap
+</code></pre>
+<h2 id="6-map-get">6. Map 两种get方式</h2>
+<pre><code class="language-go">var m = map[string]int{&quot;a&quot;:0,&quot;b&quot;:2}
+// 第一种
+fmt.Println(m[&quot;a&quot;]) // 0
+// 第二种
+a,ok := m[&quot;a&quot;]
+fmt.Println(a,ok) // 0 true
+</code></pre>
+<pre><code class="language-go">// 底层函数实现
+// src/runtime/hashmap.go
+func mapaccess1(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer
+func mapaccess2(t *maptype, h *hmap, key unsafe.Pointer) (unsafe.Pointer, bool)
+</code></pre>
+<h2 id="7">7. 扩容</h2>
+<blockquote>
+<p>装载因子为6.5</p>
+<p>扩容是渐进式，防止一次搬迁key过多影响性能</p>
+<p>触发扩容的时机: 新增新元素</p>
+<p>bucket搬迁的触发: 赋值、删除时，每次搬迁两个bucket</p>
+</blockquote>
+<pre><code class="language-go">// src/runtime/map.go
+// Maximum average load of a bucket that triggers growth is 6.5.
+// Represent as loadFactorNum/loadFactorDen, to allow integer math.
+loadFactorNum = 13
+loadFactorDen = 2
+
+loadFactor := count / (2^B)
+// 扩容条件
+
+// Did not find mapping for key. Allocate new cell &amp; add entry.
+
+// If we hit the max load factor or we have too many overflow buckets,
+// and we're not already in the middle of growing, start growing.
+// 触发最大负载因子或者太多的溢出桶
+if !h.growing()/*没有正在扩容*/ &amp;&amp; (overLoadFactor(h.count+1, h.B)/*判断负载因子*/ || tooManyOverflowBuckets(h.noverflow, h.B)) {
+    hashGrow(t, h)
+    goto again // Growing the table invalidates everything, so try again
+}
+// 负载因子计算
+// overLoadFactor reports whether count items placed in 1&lt;&lt;B buckets is over loadFactor.
+func overLoadFactor(count int, B uint8) bool {
+    return count &gt; bucketCnt &amp;&amp; uintptr(count) &gt; loadFactorNum*(bucketShift(B)/loadFactorDen)
+}
+// 溢出桶
+// tooManyOverflowBuckets reports whether noverflow buckets is too many for a map with 1&lt;&lt;B buckets.
+// Note that most of these overflow buckets must be in sparse use;
+// if use was dense, then we'd have already triggered regular map growth.
+func tooManyOverflowBuckets(noverflow uint16, B uint8) bool {
+// If the threshold is too low, we do extraneous work.
+// If the threshold is too high, maps that grow and shrink can hold on to lots of unused memory.
+// &quot;too many&quot; means (approximately) as many overflow buckets as regular buckets.
+// See incrnoverflow for more details.
+// B的值大于15
+if B &gt; 15 {
+B = 15
+}
+// The compiler doesn't see here that B &lt; 16; mask B to generate shorter shift code.
+return noverflow &gt;= uint16(1)&lt;&lt;(B&amp;15)
+}
+// 执行扩容
+func hashGrow(t *maptype, h *hmap) {
+    // If we've hit the load factor, get bigger.
+    // Otherwise, there are too many overflow buckets,
+    // so keep the same number of buckets and &quot;grow&quot; laterally.
+    bigger := uint8(1)
+    if !overLoadFactor(h.count+1, h.B) {
+        bigger = 0
+        h.flags |= sameSizeGrow
+    }
+    // 将buckets 搬迁 oldbuckets
+    oldbuckets := h.buckets
+    // 创建新的buckets
+    newbuckets, nextOverflow := makeBucketArray(t, h.B+bigger, nil)
+
+    flags := h.flags &amp;^ (iterator | oldIterator)
+    if h.flags&amp;iterator != 0 {
+        flags |= oldIterator
+    }
+    // commit the grow (atomic wrt gc)
+    h.B += bigger
+    h.flags = flags
+    h.oldbuckets = oldbuckets
+    h.buckets = newbuckets
+    // 扩容进度
+    h.nevacuate = 0
+    h.noverflow = 0
+
+    if h.extra != nil &amp;&amp; h.extra.overflow != nil {
+        // Promote current overflow buckets to the old generation.
+        if h.extra.oldoverflow != nil {
+            throw(&quot;oldoverflow is not nil&quot;)
+        }
+        h.extra.oldoverflow = h.extra.overflow
+        h.extra.overflow = nil
+    }
+    if nextOverflow != nil {
+        if h.extra == nil {
+            h.extra = new(mapextra)
+        }
+        h.extra.nextOverflow = nextOverflow
+    }
+
+    // the actual copying of the hash table data is done incrementally
+    // growWork 是渐进式执行搬迁的函数
+    // by growWork() and evacuate().
+}
+
+func growWork(t *maptype, h *hmap, bucket uintptr) {
+    // make sure we evacuate the oldbucket corresponding
+    // to the bucket we're about to use
+    evacuate(t, h, bucket&amp;h.oldbucketmask())
+
+    // evacuate one more oldbucket to make progress on growing
+    // 判断是否搬迁完
+    if h.growing() {
+        evacuate(t, h, h.nevacuate)
+        }
+    }
+}
+</code></pre>
+<h2 id="8map">8.map 比较</h2>
+<p>通过遍历比较key、val，无法对比(map1==map2 会无法编译)。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/sync/sync.Pool/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              sync.Pool
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../golang-slice%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              golang-slice深度分析
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>
