@@ -1,0 +1,39 @@
+site_name: buzoumei 技术学习记录
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+nav:
+  - Home: index.md
+  - Golang:
+      - 标准包:
+        - context: post/golang/标准包/context.md
+        - sync.Pool: post/golang/标准包/sync/sync.Pool.md
+      - 基础数据结构:
+        - golang-map: post/golang/基础数据结构/golang-map.md
+        - golang-slice深度分析: post/golang/基础数据结构/golang-slice深度分析.md
+        - golang数据结构: post/golang/基础数据结构/golang数据结构.md
+        - slice浅拷贝和深拷贝: post/golang/基础数据结构/slice浅拷贝和深拷贝.md
+      - runtime:
+        - 编译原理: post/golang/runtime/编译原理.md
+        - 逃逸分析: post/golang/runtime/逃逸分析.md
+        - GMP调度器: post/golang/runtime/GMP调度器.md
+  - Kubernetes:
+    - 容器持久化存储: post/k8s/容器持久化存储.md
+  - 架构:
+    - 项目架构设计经验: post/架构/项目架构设计经验.md
+    - raft:
+      - raft: post/架构/raft/raft.md
+    - 缓存:
+      - redis: 
+        - 缓存: post/redis/缓存.md
+        - 缓存问题: post/redis/缓存问题.md
+  - 其他: 
+    - 生产力工具: post/其他/提高生产力的工具.md
+  - 读书:
+    - 数据密集型应用设计:
+      - 第五章复制: post/数据密集型应用设计/数据密集型应用系统设计-第五章复制.md
+      - 第六章分区: post/数据密集型应用设计/数据密集型应用系统设计-第六章分区.md
+      - 第七章事务: post/数据密集型应用设计/数据密集型应用系统设计-第七章事务.md
