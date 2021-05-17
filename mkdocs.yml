@@ -30,6 +30,11 @@ nav:
       - redis: 
         - 缓存: post/redis/缓存.md
         - 缓存问题: post/redis/缓存问题.md
+  - CS:
+    - 计算机网络:
+      - 网络分层模型: post/CS/计算机网络/网络分层模型.md
+      - TCP解析: post/CS/计算机网络/TCP解析.md
+    # - 计算机系统:
   - 其他: 
     - 生产力工具: post/其他/提高生产力的工具.md
   - 读书:

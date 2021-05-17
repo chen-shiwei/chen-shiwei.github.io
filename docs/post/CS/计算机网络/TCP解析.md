@@ -8,25 +8,26 @@
 ### 头部字段作用
 
 - 源端口号
+
 - 目标端口号
-  - 找到应用进程
+    - 找到应用进程
 - 序列号
-  - 解决网络包乱序的问题
+    - 解决网络包乱序的问题
 - 确认应答号
-  - 用来解决丢包的问题
+    - 用来解决丢包的问题
 - 首部长度
-  - 获取tcp包头的大小，并计算TCP包数据的长度
+    - 获取tcp包头的大小，并计算TCP包数据的长度
 - 控制位
-  - SYN
-    - 为1时，表示建立链接；并在序列号字段填充初始值
-  - ACK
-    - 为1时，表示确认应答
-  - FIN
-    - 为1时，表示之后不会再有数据发送，并希望断开连接
-  - RST
-    - 为1时，表示TCP连接异常强制断开连接
+    - SYN
+        - 为1时，表示建立链接；并在序列号字段填充初始值
+    - ACK
+        - 为1时，表示确认应答
+    - FIN
+        - 为1时，表示之后不会再有数据发送，并希望断开连接
+    - RST
+        - 为1时，表示TCP连接异常强制断开连接
 - 窗口大小
-  - 表示tcp 连接的滑动窗口可接受数据窗口大小
+    - 表示tcp 连接的滑动窗口可接受数据窗口大小
 - 校验和
 - 紧急指针
 
@@ -55,8 +56,9 @@
 
 ## 5. TCP 三次握手和四次挥手
 ### 三次握手
-<img src="/Users/fotoable/GolandProjects/github.com/chen-shiwei.github.io/docs/post/CS/计算机网络/TCP解析.assets/三次握手.jpg" alt="三次握手" style="zoom:62%;" />
+<img src="http://qt8wkgtri.hd-bkt.clouddn.com/blog/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" alt="三次握手" style="zoom:62%;" />
+
 ### 四次挥手
 
-<img src="/Users/fotoable/GolandProjects/github.com/chen-shiwei.github.io/docs/post/CS/计算机网络/TCP解析.assets/四次挥手.png" alt="四次挥手" style="zoom:62%;" />
+<img src="http://qt8wkgtri.hd-bkt.clouddn.com/blog/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png" alt="四次挥手" style="zoom:62%;" />
 
