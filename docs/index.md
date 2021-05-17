@@ -1,9 +1,8 @@
-# 陈世伟 
-专注一下技术
+## 1. 专注以下技术
 - 语言
     - Golang
-    - Python
     - PHP
+    - Python
     - 前端
         - Vue
 - 容器
@@ -13,8 +12,14 @@
     - Mysql 
     - MongoDB
 - 中间件
-    - Kafka
-    - mqtt
     - Elasticsearch
+    - Kafka
 - 微服务
     - go-micro
+    - 链路追踪
+        - [opentelemetry](https://opentelemetry.io/)
+        - opentracing
+        - Jaeger
+
+# 2. 一起刷题
+[https://leetcode-cn.com/u/chen-shiwei/](https://leetcode-cn.com/u/chen-shiwei/)
