@@ -24,8 +24,9 @@ nav:
     - 容器持久化存储: post/k8s/容器持久化存储.md
   - 架构:
     - 项目架构设计经验: post/架构/项目架构设计经验.md
+    - 常见系统设计问题: post/架构/常见系统设计问题.md
     - raft:
-      - raft: post/架构/raft/raft.md
+      - raft: post/架构/分布式/raft.md
     - 缓存:
       - redis: 
         - 缓存: post/redis/缓存.md
