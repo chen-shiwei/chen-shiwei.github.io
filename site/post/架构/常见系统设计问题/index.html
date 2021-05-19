@@ -14,7 +14,7 @@
     
     
       
-        <title>数据密集型应用设计 - buzoumei 技术学习记录</title>
+        <title>常见系统设计问题 - buzoumei 技术学习记录</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1-id" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数据密集型应用设计
+              常见系统设计问题
             
           </span>
         </div>
@@ -197,13 +197,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../%E6%9E%B6%E6%9E%84/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-tabs__link">
+      <a href="../%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-tabs__link md-tabs__link--active">
         架构
       </a>
     </li>
@@ -252,8 +254,6 @@
         
   
   
-    
-  
 
 
   
@@ -265,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%A4%8D%E5%88%B6/" class="md-tabs__link">
         读书
       </a>
     </li>
@@ -595,12 +595,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         架构
@@ -618,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9E%B6%E6%9E%84/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-nav__link">
+      <a href="../%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-nav__link">
         项目架构设计经验
       </a>
     </li>
@@ -628,11 +630,223 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../%E6%9E%B6%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          常见系统设计问题
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         常见系统设计问题
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-id" class="md-nav__link">
+    1. 分布式ID生成器
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 分布式ID生成器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 需求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 思路
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 短网址系统
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 短网址系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    2.2 需求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    2.3 设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 信息流实现，微博、知乎首页、推特浏览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 限流器实现
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 延迟队列(定时任务调度器)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hashmap" class="md-nav__link">
+    6. 线程安全 hashmap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-10ip" class="md-nav__link">
+    7. 访问频率最高的10个IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 负载均衡设计
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9kv" class="md-nav__link">
+    9.KV存储引擎设计
+  </a>
+  
+    <nav class="md-nav" aria-label="9.KV存储引擎设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-leveldb" class="md-nav__link">
+    9.1 LevelDB 组成部分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-leveldb" class="md-nav__link">
+    9.2 LevelDB 核心逻辑
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-manifest" class="md-nav__link">
+    9.3 Manifest文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94-log" class="md-nav__link">
+    9.4 Log 文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95-sstable" class="md-nav__link">
+    9.5 SSTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-memtable" class="md-nav__link">
+    9.6 MemTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97-leveldb" class="md-nav__link">
+    9.7 LevelDB 增删改查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -665,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9E%B6%E6%9E%84/%E5%88%86%E5%B8%83%E5%BC%8F/raft/" class="md-nav__link">
+      <a href="../%E5%88%86%E5%B8%83%E5%BC%8F/raft/" class="md-nav__link">
         raft
       </a>
     </li>
@@ -895,14 +1109,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
         读书
@@ -918,16 +1130,14 @@
             
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
       
       <label class="md-nav__link" for="__nav_7_1">
         数据密集型应用设计
@@ -943,159 +1153,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          第五章复制
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%BA%94%E7%AB%A0%E5%A4%8D%E5%88%B6/" class="md-nav__link">
         第五章复制
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 多台机器
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    2. 常见复制的方式?
-  </a>
-  
-    <nav class="md-nav" aria-label="2. 常见复制的方式?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-leader" class="md-nav__link">
-    2.1 Leader
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-follower" class="md-nav__link">
-    2.2 Follower
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    2.3 同步复制与异步复制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    2.4 添加新从库
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25" class="md-nav__link">
-    2.5 节点宕机
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26" class="md-nav__link">
-    2.6 复制日志的实现
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    3. 复制延迟
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 复制延迟">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    3.1 问题
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    3.2 复制延迟解决方案
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    3.3 多主复制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    3.4 处理写入冲突
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35" class="md-nav__link">
-    3.5 多主复制拓扑
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 无主复制（客户端处理错误）
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1105,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%88%86%E5%8C%BA/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%88%86%E5%8C%BA/" class="md-nav__link">
         第六章分区
       </a>
     </li>
@@ -1117,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%83%E7%AB%A0%E4%BA%8B%E5%8A%A1/" class="md-nav__link">
+      <a href="../../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E8%AE%BE%E8%AE%A1/%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%83%E7%AB%A0%E4%BA%8B%E5%8A%A1/" class="md-nav__link">
         第七章事务
       </a>
     </li>
@@ -1151,8 +1213,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1161,58 +1221,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    1. 多台机器
+  <a href="#1-id" class="md-nav__link">
+    1. 分布式ID生成器
   </a>
+  
+    <nav class="md-nav" aria-label="1. 分布式ID生成器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 需求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    1.3 思路
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    1.4方案
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2. 常见复制的方式?
+    2. 短网址系统
   </a>
   
-    <nav class="md-nav" aria-label="2. 常见复制的方式?">
+    <nav class="md-nav" aria-label="2. 短网址系统">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-leader" class="md-nav__link">
-    2.1 Leader
+  <a href="#21" class="md-nav__link">
+    2.1 应用场景
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-follower" class="md-nav__link">
-    2.2 Follower
+  <a href="#22" class="md-nav__link">
+    2.2 需求
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#23" class="md-nav__link">
-    2.3 同步复制与异步复制
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    2.4 添加新从库
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25" class="md-nav__link">
-    2.5 节点宕机
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26" class="md-nav__link">
-    2.6 复制日志的实现
+    2.3 设计
   </a>
   
 </li>
@@ -1224,56 +1303,105 @@
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3. 复制延迟
+    3. 信息流实现，微博、知乎首页、推特浏览
   </a>
   
-    <nav class="md-nav" aria-label="3. 复制延迟">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 限流器实现
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 延迟队列(定时任务调度器)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hashmap" class="md-nav__link">
+    6. 线程安全 hashmap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-10ip" class="md-nav__link">
+    7. 访问频率最高的10个IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 负载均衡设计
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9kv" class="md-nav__link">
+    9.KV存储引擎设计
+  </a>
+  
+    <nav class="md-nav" aria-label="9.KV存储引擎设计">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    3.1 问题
+  <a href="#91-leveldb" class="md-nav__link">
+    9.1 LevelDB 组成部分
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    3.2 复制延迟解决方案
+  <a href="#92-leveldb" class="md-nav__link">
+    9.2 LevelDB 核心逻辑
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    3.3 多主复制
+  <a href="#93-manifest" class="md-nav__link">
+    9.3 Manifest文件
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    3.4 处理写入冲突
+  <a href="#94-log" class="md-nav__link">
+    9.4 Log 文件
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#35" class="md-nav__link">
-    3.5 多主复制拓扑
+  <a href="#95-sstable" class="md-nav__link">
+    9.5 SSTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96-memtable" class="md-nav__link">
+    9.6 MemTable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#97-leveldb" class="md-nav__link">
+    9.7 LevelDB 增删改查
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    4 无主复制（客户端处理错误）
-  </a>
   
 </li>
       
@@ -1290,146 +1418,273 @@
               
                 
                 
-                <h1 id="_1">第五章 复制(数据同步)</h1>
-<h2 id="1">1. 多台机器</h2>
-<p>l之间需要复制的原因 ?</p>
-<ul>
-<li>让数据与用户在地理上更接近，<strong>减少延迟</strong></li>
-<li>即使系统的一部分出故障，系统也能使用，<strong>高可用</strong></li>
-<li>集群伸缩扩容，提高请求并发，<strong>提高吞吐量</strong></li>
-</ul>
-<h2 id="2">2. 常见复制的方式?</h2>
-<ul>
-<li>单领导 single leader</li>
-<li>多领导 multi leader</li>
-<li>无领导 laderless</li>
-</ul>
-<h3 id="21-leader">2.1 Leader</h3>
-<p>主库</p>
-<h3 id="22-follower">2.2 Follower</h3>
-<ul>
-<li>只读副本 only read replicas</li>
-<li>从库 slavee</li>
-<li>备库</li>
-<li>热备 hot 能接受客户端请求的副本</li>
-<li>温备 warm 只追求领导者，不处理客户端请求</li>
-<li>冷备 cold </li>
-</ul>
-<h3 id="23">2.3 同步复制与异步复制</h3>
-<ul>
-<li>半同步复制</li>
-<li>两个从节点，一个节点同步，另一个异步</li>
-<li>链式复制</li>
-<li>异步复制</li>
-</ul>
-<h3 id="24">2.4 添加新从库</h3>
-<p>全量快照snapshot+增量同步(binglog、aof)</p>
-<h3 id="25">2.5 节点宕机</h3>
-<ul>
-<li>监控报警、</li>
-<li>故障切换、</li>
-<li>主从替换、</li>
-<li>哨兵机制</li>
-</ul>
-<h3 id="26">2.6 复制日志的实现</h3>
-<ul>
-<li>基于语句复制(binglog)</li>
-<li>预写式日志(WAL(write ahead log))</li>
-<li>逻辑日志复制(直接复制变更的数据)</li>
-<li>基于触发器(事件触发、部分复制)</li>
-</ul>
-<h2 id="3">3. 复制延迟</h2>
-<h3 id="31">3.1 问题</h3>
-<ul>
-<li>
-<p>读己之写</p>
-</li>
-<li>
-<p>用户自己修改的内容从主库读(例如修改自己用户资料从主库读，查看其它用户从从库)</p>
-</li>
-<li>客户端记录修改时间、判断内容是否最新，不够新切换数据读取(需要依赖时钟同步)</li>
-<li>
-<p>如果用户多设备(手机、平板)需要保持都连接同一主库</p>
-</li>
-<li>
-<p>单调读Monotonic reads(<strong>用户首先从新副本读取，然后从旧副本读取。时光倒流。为了防止这种异常，我们需要单调的读取</strong>)</p>
-</li>
-<li>
-<p>确保用户总是从同一副本读取 (根据用户id散列副本，而不是随机选择副本，但如果查询失败，再切换其他副本)</p>
-</li>
-<li>
-<p>一致前缀读</p>
-</li>
-</ul>
-<p>```
-  第三个复制延迟例子违反了因果律。 想象一下Poons先生和Cake夫人之间的以下简短对话：</p>
-<p>Mr. Poons​ Mrs. Cake，你能看到多远的未来？</p>
-<p>Mrs. Cake​ 通常约十秒钟，Mr. Poons.</p>
-<p>这两句话之间有因果关系：Cake夫人听到了Poons先生的问题并回答了这个问题。</p>
-<p>​ 现在，想象第三个人正在通过从库来听这个对话。 Cake夫人说的内容是从一个延迟很低的从库读取的，但Poons先生所说的内容，从库的延迟要大的多（见图5-5）。 于是，这个观察者会听到以下内容：</p>
-<p>Mrs. Cake​ 通常约十秒钟，Mr. Poons.</p>
-<p>Mr. Poons​ Mrs. Cake，你能看到多远的未来？
-  ```</p>
-<p>如果写入按某个顺序发生，那么读取也必须以同样的方式。</p>
-<h3 id="32">3.2 复制延迟解决方案</h3>
-<ul>
-<li>通过主库进行某种读取</li>
-</ul>
-<h3 id="33">3.3 多主复制</h3>
-<p>应用场景</p>
-<ul>
-<li>运维多个数据中心(容忍单点故障，地理上更接近用户)，一个主库一个数据中心</li>
-<li>性能</li>
-<li>容忍数据中心停机</li>
-<li>容忍网络问题</li>
-<li>需要离线操作的客户端</li>
-<li>应用设备断网需要继续工作</li>
-<li>每一个设备都是一个数据中心</li>
-<li>CouchDB</li>
-<li>协同编辑</li>
-<li>Google Docs</li>
-<li>多领导复制加速协作，但是会有写入冲突</li>
-</ul>
-<h3 id="34">3.4 处理写入冲突</h3>
-<ul>
-<li>同步与异步检测冲突</li>
-<li>同步检测冲突只适合单主</li>
-<li>(多主复制的主要优点)异步允许每个副本独立接受写入</li>
-<li>避免冲突</li>
-<li>当用户编辑自己的数据时，保证用户的用户都路由同一数据中心，并使用该数据中心的领导进行读写</li>
-<li>收敛至一致状态</li>
-<li>所有副本必须在所有变更完成时收敛至一个相同的最终值</li>
-<li>每个写入唯一id(id高(时间戳相关)具有优先级写入胜利</li>
-<li>写时执行和读时执行</li>
-<li>预置冲突解决脚本</li>
-<li>CouchDB</li>
-</ul>
-<p>自动冲突解决</p>
-<ul>
-<li>无冲突复制数据类型</li>
-<li>是可以由多个用户同时编辑的集合，映射，有序列表，计数器等的一系列数据结构，它们以合理的方式自动解决冲突</li>
-<li>可合并持久数据结构</li>
-<li>git 版本控制</li>
-<li>可执行转换</li>
-<li>专为同时编辑项目的有序列表而设计的，例如构成文本文档的字符列表</li>
-<li>Google Docs</li>
-</ul>
-<h3 id="35">3.5 多主复制拓扑</h3>
-<h2 id="4">4 无主复制（客户端处理错误）</h2>
-<ul>
-<li>一些数据存储系统采用不同的方法，放弃主库的概念，并允许任何副本直接接受来自客户端的写入。</li>
-<li>AWS Dynamo、 Riak，Cassandra和Voldemort</li>
-<li>读请求也被并行地发送到多个节点</li>
-<li>客户端发现副本3具有陈旧值，并将新值写回到该副本</li>
-<li>如果有n个副本，每个写入必须由w节点确认才能被认为是成功的，并且我们必须至少为每个读取查询r个节点。 （在我们的例子中，$n = 3，w = 2，r = 2$）。只要$w + r&gt; n$，我们期望在读取时获得最新的值，因为r个读取中至少有一个节点是最新的。遵循这些r值，w值的读写称为<strong>法定人数（quorum）</strong><a href="https://github.com/Vonng/ddia/blob/master/有时候这种法定人数被称为严格的法定人数，相对&quot;宽松的法定人数&quot;而言（见&quot;[宽松的法定人数与提示移交](#宽松的法定人数与提示移交)&quot;）)的读和写【44】。你可以认为，r和w是有效读写所需的最低票">^vii</a>。</li>
-<li>监视你的数据库是否返回最新的结果</li>
-<li>检测并发写入</li>
-<li>最后写入胜利(对其并发写入)</li>
-<li>合并同时写入的值</li>
-<li>版本向量：当读取值时，版本向量会从数据库副本发送到客户端，并且随后写入值时需要将其发送回数据库。（Riak将版本向量编码为一个字符串，它称为<strong>因果上下文（causal context）</strong>）。版本向量允许数据库区分覆盖写入和并发写入</li>
-</ul>
+                  <h1>常见系统设计问题</h1>
                 
-                  
+                <h2 id="1-id">1. 分布式ID生成器</h2>
+<h3 id="11">1.1 应用场景</h3>
+<ul>
+<li>user_id</li>
+<li>微博id</li>
+<li>msg_id</li>
+<li>帖子id</li>
+<li>order_id</li>
+</ul>
+<h3 id="12">1.2 需求</h3>
+<ul>
+<li>全局唯一</li>
+<li>短，节省内存</li>
+<li>按时间粗略有序/按时间递增</li>
+<li>具有标识性，易用</li>
+</ul>
+<h2 id="13">1.3 思路</h2>
+<ul>
+<li>
+<p>基于数据库生成 </p>
+</li>
+<li>
+<p>mysql 5.6 auto_increment 特性</p>
+</li>
+<li>postgres 9.6 sequence 特性</li>
+<li>
+<p>Flickr Ticket Servers</p>
+</li>
+<li>
+<p>基于分布式协调器生成</p>
+</li>
+<li>
+<p>etcd 强一致性 raft 协议</p>
+</li>
+<li>zookeeper paxos 协议</li>
+<li>consule gossip 协议</li>
+</ul>
+<blockquote>
+<p>基于一个累计值(计数器)在一致性集群中。</p>
+</blockquote>
+<ul>
+<li>
+<p>划分命名空间并行生成</p>
+</li>
+<li>
+<p>MongoDB objectID</p>
+</li>
+<li>snowflake </li>
+</ul>
+<h3 id="14">1.4方案</h3>
+<ol>
+<li>UUID</li>
+</ol>
+<p>MongoDB 3.3 的objectid （12字节）生成规则：</p>
+<ul>
+<li>
+<p>4个字节 unix_timestamp</p>
+<p><code>go
+ func getTimestamp() int64 {
+   return time.Now().Unix()
+ }</code></p>
+</li>
+<li>
+<p>3字节机器id</p>
+</li>
+<li>
+<p>2字节进程id</p>
+</li>
+<li>
+<p>3字节计数器</p>
+</li>
+</ul>
+<p>MongoDB 4.0</p>
+<ul>
+<li>a 4-byte <em>timestamp value</em>, representing the ObjectId’s creation, measured in seconds since the Unix epoch 4位字节时间戳</li>
+<li>a 5-byte <em>random value</em> 5字节随机数</li>
+<li>
+<p>a 3-byte <em>incrementing counter</em>, initialized to a random value 3字节计数器，初始值为一个随机器</p>
+</li>
+<li>
+<p>snowflake 64字节 https://github.com/twitter-archive/snowflake/tree/snowflake-2010</p>
+</li>
+<li>
+<p>time - 41 bits (millisecond precision w/ a custom epoch gives us 69 years) 高位(字节序)时间戳 保证错略有序</p>
+</li>
+<li>configured machine id - 10 bits - gives us up to 1024 machines 1024 机器id</li>
+<li>sequence number - 12 bits - rolls over every 4096 per machine (with protection to avoid rollover in the same ms) 12位序列号</li>
+</ul>
+<p>相关技术文章</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzI4MTY5NTk4Ng==&amp;mid=2247489561&amp;idx=1&amp;sn=7396f373af4efa62ba4dbecc6d7f83b3&amp;source=41#wechat_redirect">生成全局唯一ID的3个思路，来自一个资深架构师的总结</a></li>
+<li>https://github.com/twitter-archive/snowflake/tree/snowflake-2010</li>
+</ul>
+<h2 id="2">2. 短网址系统</h2>
+<h3 id="21">2.1 应用场景</h3>
+<ul>
+<li>内容链接分享（会有字数限制）</li>
+<li>短信内容携带链接</li>
+</ul>
+<h3 id="22">2.2 需求</h3>
+<p>​   尽可能短</p>
+<h3 id="23">2.3 设计</h3>
+<ul>
+<li>
+<p>长度</p>
+</li>
+<li>
+<p>当前互联网网页总数为45亿， &gt; 2^32  &lt; 2^64，所以用64的整数足够了</p>
+</li>
+<li>
+<p>微博短网址长度为7的字符串，可以看做62进制的数</p>
+<blockquote>
+<p>长度不超过7的字符串，由大小写字母加数字共62个字母组成</p>
+</blockquote>
+</li>
+<li>
+<p>一对一映射还是一对多映射？</p>
+</li>
+<li>一对多<ul>
+<li>可以收集 Http user-agent信息、用户名、所在网站做数据分析</li>
+</ul>
+</li>
+<li>如何计算短网址</li>
+<li>uuid 生生成方案</li>
+<li>如何存储</li>
+<li>短网址作为主键，长网址作为value</li>
+<li>mysql、redis、LevelDB</li>
+<li>跳转时301还是302？</li>
+<li>301 永久重定向，浏览器会存储跳转之后的地址不在请求短地址服务器，无法记录请求数据统计</li>
+<li>302 临时重定向</li>
+</ul>
+<h2 id="3">3. 信息流实现，微博、知乎首页、推特浏览</h2>
+<h2 id="4">4. 限流器实现</h2>
+<h2 id="5">5. 延迟队列(定时任务调度器)</h2>
+<ul>
+<li>redis 有序集合 实现 参考 <a href="https://tech.youzan.com/queuing_delay/">有赞延迟队列设计</a></li>
+<li>任务携带执行时间戳当做score存储到ZSet，利用有序集合score根据时间戳从小到大排序排序</li>
+<li>然后ZRANGEBYSCORE 消费Zset 队列</li>
+<li>可以根据延迟任务的时间不同建立不同延迟队列，提高扫描速度，降低消息延迟</li>
+<li>时间轮（HashedWheelTimer）循环队列</li>
+<li>go实现 https://www.luozhiyun.com/archives/444</li>
+<li>Linux 定时器实现也是这方案</li>
+</ul>
+<blockquote>
+<p>https://chai2010.cn/advanced-go-programming-book/ch6-cloud/readme.html</p>
+</blockquote>
+<h2 id="6-hashmap">6. 线程安全 hashmap</h2>
+<ul>
+<li>锁分离</li>
+<li>读写锁分开 go map+lock</li>
+<li>sync.map TODO::待完善</li>
+<li>读写两个map，适合写少读多场景</li>
+<li>空间换时间，读map和写map 不同减少 互斥锁的影响</li>
+</ul>
+<h2 id="7-10ip">7. 访问频率最高的10个IP</h2>
+<h2 id="8">8. 负载均衡设计</h2>
+<ul>
+<li>
+<p>轮询</p>
+</li>
+<li>
+<p>随机数取模机器数量</p>
+</li>
+<li>
+<p>hash 关键信息 比如user_id</p>
+</li>
+</ul>
+<h2 id="9kv">9.KV存储引擎设计</h2>
+<blockquote>
+<p>要点：内存随机写甚至比磁盘顺序写要慢</p>
+</blockquote>
+<ul>
+<li>rockdb 由leveldb进化来得 </li>
+<li>LevelDB</li>
+</ul>
+<h4 id="91-leveldb">9.1 LevelDB 组成部分</h4>
+<ul>
+<li>SSTable <ul>
+<li>MemTable(memory table)，新数据会写到这里，然后批量写入磁盘，以提高吞吐量</li>
+</ul>
+</li>
+<li>WAL 预写式日志(write Ahead Log) <ul>
+<li>写memory table 时会先写WAL日志，如果机器挂掉，内存中SSTable 丢失，可以通过WAL日志恢复数据</li>
+<li><a href="https://zhuanlan.zhihu.com/p/24900322">通过WAL保证事务一支性</a></li>
+</ul>
+</li>
+<li>Immtable MemTable(不变的内存表)<ul>
+<li>当内存中的 MemTable达到指定大小后,不再接收数据，同时会有新的MemTable产生，新数据写到MemTable，老的MemTable随后会写到磁盘编程一个SST文件</li>
+</ul>
+</li>
+<li>SSTable 文件<ul>
+<li>磁盘上的SSTable，文件尾部追加一块索引，记录key-&gt;offset，提交随机读的效率</li>
+<li>SST文件为Level0到Level n多层，每一层多个SST文件</li>
+<li>单个SST文件容量随着层次增加成倍增长</li>
+<li>Level 0 的SST文件 有Immtable MemTable 直接Dump产生，其他Level的SST文件由上一层的文件和本层文件归并产生</li>
+</ul>
+</li>
+<li>Manifest文件<ul>
+<li>Manifest 记录SST文件在不同Level 的分布、单个SST文件最大最小key、以及一些Level需要的元数据</li>
+</ul>
+</li>
+<li>Current 文件<ul>
+<li>Manifest可能有多个。Current记录Manifest文件名，让LevelDB启动时找到Manifest，进而加载Level多层的SST数据
+<img alt="img" src="http://qt8wkgtri.hd-bkt.clouddn.com/blog/architecture.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="92-leveldb">9.2 LevelDB 核心逻辑</h4>
+<ol>
+<li>SST文件尾部索引要放到内存中，这样索引就不需要一次IO了</li>
+<li>所有读先看MemTable，没有再查找内存中的索引(SST尾部索引放内存中)</li>
+<li>所有写操作都写MemTable，SST文件无法修改</li>
+<li>定期把MemTable写入磁盘，称为SST文件，并新建MemTable接收新数据</li>
+<li>定期对SST文件合并</li>
+<li>SST不可修改的话，怎么更新和删除数据<ul>
+<li>更新 追加新的key-value 到文件尾部，SST文件是从前往后读（写入时间最近往前读），新数据会被先读到</li>
+<li>删除 追加墓碑(tombstone)值，表示删除该key，在定期合并SST文件时丢弃这些key，既可以删除墓碑值</li>
+</ul>
+</li>
+</ol>
+<h4 id="93-manifest">9.3 Manifest文件</h4>
+<p>Manifest 记录SST 的层级、文件名、最小key 和最大key</p>
+<p><img alt="img" src="http://qt8wkgtri.hd-bkt.clouddn.com/blog/manifest.png" /></p>
+<h4 id="94-log">9.4 Log 文件</h4>
+<ul>
+<li>每个文件由多个block 组成，每个block 32k，读写以block 为单位</li>
+<li>下图有3个block</li>
+</ul>
+<p><img src="http://qt8wkgtri.hd-bkt.clouddn.com/blog/log.png" alt="img" style="zoom:67%;" /></p>
+<h4 id="95-sstable">9.5 SSTable</h4>
+<p><img src="http://qt8wkgtri.hd-bkt.clouddn.com/blog/sstable.png" alt="img" style="zoom: 67%;" /></p>
+<h4 id="96-memtable">9.6 MemTable</h4>
+<p>MemTable 数据是按key有序的，当插入数据时，需要把新key-val 插到合适的位置，保证key 的有序性；</p>
+<p>MemTable底层数据结构是SkipTable。</p>
+<h4 id="97-leveldb">9.7 LevelDB 增删改查</h4>
+<ul>
+<li>
+<p>增</p>
+</li>
+<li>
+<p>追加写入</p>
+</li>
+<li>
+<p>删</p>
+</li>
+<li>
+<p>墓碑值</p>
+</li>
+<li>
+<p>改</p>
+</li>
+<li>
+<p>追加写入</p>
+</li>
+<li>
+<p>查</p>
+</li>
+<li>
+<p>MemTable+SkipTable</p>
+</li>
+<li>key有序，BinarySearch</li>
+<li>页缓存</li>
+<li>布隆过滤器 bloom filter</li>
+<li>周期性分层合并</li>
+</ul>
                 
               
               
@@ -1447,7 +1702,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../../%E5%85%B6%E4%BB%96/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B%E7%9A%84%E5%B7%A5%E5%85%B7/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1456,19 +1711,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              生产力工具
+              项目架构设计经验
             </div>
           </div>
         </a>
       
       
-        <a href="../%E6%95%B0%E6%8D%AE%E5%AF%86%E9%9B%86%E5%9E%8B%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%88%86%E5%8C%BA/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../%E5%88%86%E5%B8%83%E5%BC%8F/raft/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              第六章分区
+              raft
             </div>
           </div>
           <div class="md-footer__button md-icon">
