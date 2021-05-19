@@ -14,7 +14,7 @@
     
     
       
-        <title>深拷贝和浅拷贝 - buzoumei 技术学习记录</title>
+        <title>Raft - buzoumei 技术学习记录</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slice" class="md-skip">
+        <a href="#raft" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              深拷贝和浅拷贝
+              Raft
             
           </span>
         </div>
@@ -158,8 +158,6 @@
         
   
   
-    
-  
 
 
   
@@ -171,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/context/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../golang/%E6%A0%87%E5%87%86%E5%8C%85/context/" class="md-tabs__link">
         Golang
       </a>
     </li>
@@ -199,13 +197,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../%E6%9E%B6%E6%9E%84/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-tabs__link">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-tabs__link md-tabs__link--active">
         架构
       </a>
     </li>
@@ -328,14 +328,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Golang
@@ -376,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/context/" class="md-nav__link">
+      <a href="../../../golang/%E6%A0%87%E5%87%86%E5%8C%85/context/" class="md-nav__link">
         context
       </a>
     </li>
@@ -388,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%A0%87%E5%87%86%E5%8C%85/sync/sync.Pool/" class="md-nav__link">
+      <a href="../../../golang/%E6%A0%87%E5%87%86%E5%8C%85/sync/sync.Pool/" class="md-nav__link">
         sync.Pool
       </a>
     </li>
@@ -404,16 +402,14 @@
             
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
         基础数据结构
@@ -431,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../golang-map/" class="md-nav__link">
+      <a href="../../../golang/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/golang-map/" class="md-nav__link">
         golang-map
       </a>
     </li>
@@ -443,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../golang-slice%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90/" class="md-nav__link">
+      <a href="../../../golang/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/golang-slice%E6%B7%B1%E5%BA%A6%E5%88%86%E6%9E%90/" class="md-nav__link">
         golang-slice深度分析
       </a>
     </li>
@@ -455,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../golang%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../../../golang/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/golang%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
         golang数据结构
       </a>
     </li>
@@ -465,63 +461,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          slice浅拷贝和深拷贝
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../golang/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/slice%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" class="md-nav__link">
         slice浅拷贝和深拷贝
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#go-slice" class="md-nav__link">
-    go slice 底层是基于数组实现的
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    浅拷贝
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    深拷贝
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -560,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../runtime/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" class="md-nav__link">
+      <a href="../../../golang/runtime/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" class="md-nav__link">
         编译原理
       </a>
     </li>
@@ -572,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../runtime/%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/" class="md-nav__link">
+      <a href="../../../golang/runtime/%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/" class="md-nav__link">
         逃逸分析
       </a>
     </li>
@@ -584,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../runtime/GMP%E8%B0%83%E5%BA%A6%E5%99%A8/" class="md-nav__link">
+      <a href="../../../golang/runtime/GMP%E8%B0%83%E5%BA%A6%E5%99%A8/" class="md-nav__link">
         GMP调度器
       </a>
     </li>
@@ -651,12 +595,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         架构
@@ -674,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%9E%B6%E6%9E%84/%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-nav__link">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%BB%8F%E9%AA%8C/" class="md-nav__link">
         项目架构设计经验
       </a>
     </li>
@@ -686,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../%E6%9E%B6%E6%9E%84/%E5%B8%B8%E8%A7%81%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../%E5%B8%B8%E8%A7%81%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98/" class="md-nav__link">
         常见系统设计问题
       </a>
     </li>
@@ -696,14 +642,16 @@
             
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
       
       <label class="md-nav__link" for="__nav_4_3">
         raft
@@ -719,11 +667,59 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../%E6%9E%B6%E6%9E%84/%E5%88%86%E5%B8%83%E5%BC%8F/raft/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          raft
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         raft
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#raft" class="md-nav__link">
+    Raft
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一.相关项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二.基本概念
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1055,8 +1051,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1065,22 +1059,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#go-slice" class="md-nav__link">
-    go slice 底层是基于数组实现的
+  <a href="#raft" class="md-nav__link">
+    Raft
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    浅拷贝
+    一.相关项目
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    深拷贝
+    二.基本概念
   </a>
   
 </li>
@@ -1098,36 +1092,42 @@
               
                 
                 
-                <h1 id="slice">slice 深拷贝和浅拷贝</h1>
-<h2 id="go-slice">go slice 底层是基于数组实现的</h2>
-<pre><code class="language-go">var array [2]int //数组
-var slice []int // 切片
-</code></pre>
-<h2 id="_1">浅拷贝</h2>
-<p>源切片和目的切片共享同一底层数组</p>
-<pre><code class="language-go">s1 := make([]int, 5, 5)
-s2 := s1
-s1[1] = 1
-fmt.Printf(&quot;s1：%v ，s2：%v \n&quot;, s1, s2) // s1：[0 1 0 0 0] ，s2：[0 1 0 0 0]
-</code></pre>
-<h2 id="_2">深拷贝</h2>
-<p>s3 源切片修改不影响 s4</p>
-<pre><code class="language-go">s3 := make([]int, 5, 5)
-s4 := make([]int, 5, 5)
-copy(s4, s3)
-s3[1] = 1
-fmt.Printf(&quot;s3：%v ，s4：%v \n&quot;, s3, s4) // s3：[0 1 0 0 0] ，s4：[0 0 0 0 0]
-</code></pre>
-<p>超出底层数组容量，会导致也会切片深拷贝</p>
-<pre><code class="language-go">s5 := []int{1, 2, 3, 4, 5}
-s6 := s5
-s5 = append(s5, 6)
-fmt.Printf(&quot;s5：%v ，s6：%v \n&quot;, s5, s6) // s5：[1 1 3 4 5 6] ，s6：[1 1 3 4 5]
-s5[2] = 0
-fmt.Printf(&quot;s5：%v ，s6：%v \n&quot;, s5, s6) // s5：[1 2 0 4 5 6] ，s6：[1 2 3 4 5]
-s6[2] = 8
-fmt.Printf(&quot;s5：%v ，s6：%v \n&quot;, s5, s6) // s5：[1 2 0 4 5 6] ，s6：[1 2 8 4 5]
-</code></pre>
+                  <h1>raft</h1>
+                
+                <h2 id="raft">Raft</h2>
+<blockquote>
+<p>共识算法</p>
+</blockquote>
+<h2 id="_1">一.相关项目</h2>
+<ul>
+<li>Etcd<ul>
+<li>为什么不大数据量的存储？</li>
+</ul>
+</li>
+<li>Consule<ul>
+<li>为什么提供3种一致性模式？<ul>
+<li>default</li>
+<li>consistent</li>
+<li>stale</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tikv<ul>
+<li>大数据量实现</li>
+<li>multi raft？</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">二.基本概念</h2>
+<ul>
+<li>投票机制实现容错和共识</li>
+<li>raft集群的操作称为提案，每一个提案，必须&gt;n/2 节点同意才能提交</li>
+<li>raft角色</li>
+<li>Leader</li>
+<li>Follower</li>
+<li>Candidate</li>
+</ul>
                 
                   
                 
@@ -1147,7 +1147,7 @@ fmt.Printf(&quot;s5：%v ，s6：%v \n&quot;, s5, s6) // s5：[1 2 0 4 5 6] ，s
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../golang%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../%E5%B8%B8%E8%A7%81%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1156,19 +1156,19 @@ fmt.Printf(&quot;s5：%v ，s6：%v \n&quot;, s5, s6) // s5：[1 2 0 4 5 6] ，s
               <span class="md-footer__direction">
                 Previous
               </span>
-              golang数据结构
+              常见系统设计问题
             </div>
           </div>
         </a>
       
       
-        <a href="../../runtime/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../../redis/%E7%BC%93%E5%AD%98/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              编译原理
+              缓存
             </div>
           </div>
           <div class="md-footer__button md-icon">
