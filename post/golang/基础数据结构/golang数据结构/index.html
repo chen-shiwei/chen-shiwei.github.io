@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slice" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -191,6 +191,22 @@
     <li class="md-tabs__item">
       <a href="../../../k8s/%E5%AE%B9%E5%99%A8%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8/" class="md-tabs__link">
         Kubernetes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/grpc%E7%9B%B8%E5%85%B3/" class="md-tabs__link">
+        中间件
       </a>
     </li>
   
@@ -482,16 +498,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#slice" class="md-nav__link">
-    一.Slice
+  <a href="#_1" class="md-nav__link">
+    数组
   </a>
   
-    <nav class="md-nav" aria-label="一.Slice">
+    <nav class="md-nav" aria-label="数组">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-slice" class="md-nav__link">
-    1.1 Slice扩容策略
+  <a href="#_2" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    访问
   </a>
   
 </li>
@@ -502,14 +532,89 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#slice" class="md-nav__link">
+    一.Slice （动态数组）
+  </a>
+  
+    <nav class="md-nav" aria-label="一.Slice （动态数组）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    切片与数组的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-slice" class="md-nav__link">
+    1.1 Slice容量不足时自动扩容策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    切片初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    访问
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     二.哈希表
+  </a>
+  
+    <nav class="md-nav" aria-label="二.哈希表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    key 访问
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    扩容(渐进)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     三.字符串
   </a>
   
@@ -668,11 +773,53 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
+        中间件
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="中间件" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          中间件
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E4%B8%AD%E9%97%B4%E4%BB%B6/grpc%E7%9B%B8%E5%85%B3/" class="md-nav__link">
+        gprc 设计与实现
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         架构
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="架构" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           架构
         </label>
@@ -712,14 +859,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
-      <label class="md-nav__link" for="__nav_4_3">
+      <label class="md-nav__link" for="__nav_5_3">
         raft
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="raft" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_3">
+        <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           raft
         </label>
@@ -753,14 +900,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
       
-      <label class="md-nav__link" for="__nav_4_4">
+      <label class="md-nav__link" for="__nav_5_4">
         缓存
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="缓存" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+        <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           缓存
         </label>
@@ -774,14 +921,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_1" type="checkbox" id="__nav_4_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4_1" type="checkbox" id="__nav_5_4_1" >
       
-      <label class="md-nav__link" for="__nav_4_4_1">
+      <label class="md-nav__link" for="__nav_5_4_1">
         redis
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="redis" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_4_1">
+        <label class="md-nav__title" for="__nav_5_4_1">
           <span class="md-nav__icon md-icon"></span>
           redis
         </label>
@@ -840,14 +987,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
-      <label class="md-nav__link" for="__nav_5">
+      <label class="md-nav__link" for="__nav_6">
         CS
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="CS" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           CS
         </label>
@@ -863,14 +1010,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
       
-      <label class="md-nav__link" for="__nav_5_1">
+      <label class="md-nav__link" for="__nav_6_1">
         计算机网络
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="计算机网络" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
+        <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           计算机网络
         </label>
@@ -923,14 +1070,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      <label class="md-nav__link" for="__nav_6">
+      <label class="md-nav__link" for="__nav_7">
         其他
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="其他" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           其他
         </label>
@@ -965,14 +1112,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
-      <label class="md-nav__link" for="__nav_7">
+      <label class="md-nav__link" for="__nav_8">
         读书
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="读书" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+        <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           读书
         </label>
@@ -988,14 +1135,14 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
       
-      <label class="md-nav__link" for="__nav_7_1">
+      <label class="md-nav__link" for="__nav_8_1">
         数据密集型应用设计
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="数据密集型应用设计" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_1">
+        <label class="md-nav__title" for="__nav_8_1">
           <span class="md-nav__icon md-icon"></span>
           数据密集型应用设计
         </label>
@@ -1072,16 +1219,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#slice" class="md-nav__link">
-    一.Slice
+  <a href="#_1" class="md-nav__link">
+    数组
   </a>
   
-    <nav class="md-nav" aria-label="一.Slice">
+    <nav class="md-nav" aria-label="数组">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-slice" class="md-nav__link">
-    1.1 Slice扩容策略
+  <a href="#_2" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    访问
   </a>
   
 </li>
@@ -1092,14 +1253,89 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#slice" class="md-nav__link">
+    一.Slice （动态数组）
+  </a>
+  
+    <nav class="md-nav" aria-label="一.Slice （动态数组）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    切片与数组的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-slice" class="md-nav__link">
+    1.1 Slice容量不足时自动扩容策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    切片初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    访问
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
     二.哈希表
+  </a>
+  
+    <nav class="md-nav" aria-label="二.哈希表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    数据结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    key 访问
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    扩容(渐进)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     三.字符串
   </a>
   
@@ -1120,8 +1356,45 @@
                 
                   <h1>golang数据结构</h1>
                 
-                <h2 id="slice">一.Slice</h2>
-<pre><code class="language-go">// https://github.com/golang/go/blob/3b2a578166bdedd94110698c971ba8990771eb89/src/reflect/value.go#L1994
+                <h2 id="_1">数组</h2>
+<h3 id="_2">概述</h3>
+<ul>
+<li>相同类型元素的集合组成的数据结构</li>
+</ul>
+<pre><code class="language-golang">[2]int
+[10]interface
+</code></pre>
+<ul>
+<li>数组大小在初始化之后无法改变</li>
+<li>存储元素相同，并且大小也相同的不同数组才是同一类型</li>
+</ul>
+<pre><code class="language-go">    a := [2]int{1, 2}
+    b := [3]int{1, 2}
+    fmt.Println(reflect.DeepEqual(a, b)) // false
+</code></pre>
+<h3 id="_3">初始化</h3>
+<pre><code class="language-go">arr1 := [2]int{1,2}
+// 上限推导，编译期推导数组大小
+arr2 := [...]int{1,2}
+fmt.Println(reflect.DeepEqual(arr1, arr2)) // true
+</code></pre>
+<ul>
+<li>
+<p>根据元素数量不同，编译器在初始化字面量时做不同的优化</p>
+</li>
+<li>
+<p>元素数量&lt;=4，将元素中的元素放到栈上</p>
+</li>
+<li>大于 4将数组中的元素放到静态区并在运行时取出</li>
+</ul>
+<h3 id="_4">访问</h3>
+<p>​   - 索引负数、越界、非整数 panic，直接使用整数或者常量访问数组会在编译期发现，若是使用变量代替索引去访问则无法发现</p>
+<h2 id="slice">一.Slice （动态数组）</h2>
+<h3 id="_5">概述</h3>
+<pre><code class="language-go">[]int
+[]interface
+
+// https://github.com/golang/go/blob/3b2a578166bdedd94110698c971ba8990771eb89/src/reflect/value.go#L1994
 type SliceHeader struct {
   // 指向底层数组的指针
     Data uintptr 
@@ -1131,7 +1404,14 @@ type SliceHeader struct {
     Cap  int
 }
 </code></pre>
-<h3 id="11-slice">1.1 Slice扩容策略</h3>
+<h3 id="_6">切片与数组的关系</h3>
+<ul>
+<li>切片引用抽象层</li>
+<li>对数组中的部分连续片段进行引用</li>
+<li>在运行期间可以修改它的长度和范围</li>
+<li>当底层数组长度无法满足切片时会触发扩容，上层是无法看到切片变化</li>
+</ul>
+<h3 id="11-slice">1.1 Slice容量不足时自动扩容策略</h3>
 <ol>
 <li>如果期望容量&gt;当前容量的两倍，使用期望容量</li>
 <li>切片长度&lt;1024，容量翻倍 </li>
@@ -1139,50 +1419,177 @@ type SliceHeader struct {
 </ol>
 <blockquote>
 <p>大切片扩容或者复制时可能会发生大规模内存拷贝</p>
+<p><img alt="golang-slice-append" src="https://img.draveness.me/2020-03-12-15839729948451-golang-slice-append.png" /></p>
 </blockquote>
-<h2 id="_1">二.哈希表</h2>
+<h3 id="_7">切片初始化</h3>
+<pre><code class="language-go">arr[0:3] or slice[0:3]
+slice := []int{1, 2, 3}
+slice := make([]int, 10)
+</code></pre>
+<ul>
+<li>data[low, high, max] max: Invalid index values, must be low &lt;= high &lt;= max</li>
+</ul>
+<pre><code class="language-go">    s := []int{1, 2, 3, 4, 5, 6, 7, 8}
+    s1 := s[3:6:8]
+    fmt.Println(s1, len(s1), cap(s1))
+// [4 5 6] 3 5
+</code></pre>
+<h3 id="_8">访问</h3>
+<ul>
+<li>len 和 cap 获取长度或者容量是切片最常见的操作=&gt;编译器将这它们看成两种特殊操作 OLEN 和 OCAP,len(slice) 或者 cap(slice) 在一些情况下会直接替换成切片的长度或者容量，不需要在运行时获取</li>
+</ul>
+<h2 id="_9">二.哈希表</h2>
 <ul>
 <li>哈希函数</li>
 <li>决定哈希读写性能（键值映射）</li>
+<li>要求输出范围大于输入范围(理想的效果)</li>
 <li>冲突解决方法</li>
-<li>开放寻址法<ul>
+<li>
+<p>开放寻址法</p>
+<ul>
 <li><strong>依次探测和比较数组中的元素以判断目标键值对是否存在于哈希表中</strong></li>
 <li>性能影响最大的是<strong>装载因子 </strong>（装载因子:=元素数量÷桶数量）</li>
 </ul>
+<p><img alt="open-addressing-and-set" src="https://img.draveness.me/2019-12-30-15777168478785-open-addressing-and-set.png" /></p>
 </li>
-<li>拉链法<ul>
+<li>
+<p>拉链法</p>
+<ul>
+<li><img alt="separate-chaing-and-set" src="https://img.draveness.me/2019-12-30-15777168478798-separate-chaing-and-set.png" /></li>
 <li>引入红黑树以优化性能</li>
 </ul>
+<h3 id="_10">数据结构</h3>
 </li>
 </ul>
-<pre><code class="language-go">type hmap struct {
-    count     int
-    flags     uint8
-    B         uint8
-    noverflow uint16
-    hash0     uint32
+<p><img alt="hmap-and-buckets" src="https://img.draveness.me/2020-10-18-16030322432679/hmap-and-buckets.png" /></p>
+<pre><code>```go
+// 哈希结构，结合上图
+type hmap struct {
+  count     int // 哈希表的元素数量
+  flags     uint8
+  B         uint8 // 存bucket的数量对数，2的倍数 len(buckets) = 2^B
+  noverflow uint16
+  hash0     uint32 // 哈希的种子 给哈希结果引入随机性
 
-    buckets    unsafe.Pointer
-    oldbuckets unsafe.Pointer
-    nevacuate  uintptr
+  buckets    unsafe.Pointer // 指向 []*runtime.bmap,每个桶存8个键值对，单个桶装满使用extra.nextOverflow
+  oldbuckets unsafe.Pointer // 扩容之前的buckets，大小是buckets的一半
+  nevacuate  uintptr
 
-    extra *mapextra
+  extra *mapextra
 }
 
 type mapextra struct {
-    overflow    *[]*bmap
-    oldoverflow *[]*bmap
-    nextOverflow *bmap
+  overflow    *[]*bmap
+  oldoverflow *[]*bmap
+  nextOverflow *bmap
 }
+
+// A bucket for a Go map. 编译
+type bmap struct {
+    // tophash generally contains the top byte of the hash value
+    // for each key in this bucket. If tophash[0] &lt; minTopHash,
+    // tophash[0] is a bucket evacuation state instead.
+    tophash [bucketCnt]uint8
+    // Followed by bucketCnt keys and then bucketCnt elems.
+    // NOTE: packing all the keys together and then all the elems together makes the
+    // code a bit more complicated than alternating key/elem/key/elem/... but it allows
+    // us to eliminate padding which would be needed for, e.g., map[int64]int8.
+    // Followed by an overflow pointer.
+}
+// 运行时
+type bmap struct {
+    topbits  [8]uint8
+    keys     [8]keytype
+    values   [8]valuetype
+    pad      uintptr
+    overflow uintptr
+}
+
+```
 </code></pre>
 <ul>
 <li>哈希扩容条件</li>
-<li>装载因子超过6.5</li>
-<li>哈希表使用太多溢出桶</li>
+<li>装载因子超过6.5 （装载因子:=元素数量÷桶数量）</li>
+<li>
+<p>哈希表使用太多溢出桶</p>
+</li>
+<li>
+<p>什么类型可以做哈希的key
+Invalid map key type: the comparison operators == and != must be fully defined for key type</p>
+</li>
+<li>初始化</li>
 </ul>
-<h2 id="_2">三.字符串</h2>
+<pre><code class="language-go">func makemap(t *maptype, hint int, h *hmap) *hmap {
+    mem, overflow := math.MulUintptr(uintptr(hint), t.bucket.size)
+    if overflow || mem &gt; maxAlloc {
+        hint = 0
+    }
+
+    if h == nil {
+        h = new(hmap)
+    }
+    h.hash0 = fastrand()
+
+    B := uint8(0)
+    for overLoadFactor(hint, B) {
+        B++
+    }
+    h.B = B
+
+    if h.B != 0 {
+        var nextOverflow *bmap
+        h.buckets, nextOverflow = makeBucketArray(t, h.B, nil)
+        if nextOverflow != nil {
+            h.extra = new(mapextra)
+            h.extra.nextOverflow = nextOverflow
+        }
+    }
+    return h
+}
+</code></pre>
+<p>这个函数会按照下面的步骤执行：
+  - 计算哈希占用的内存是否溢出或者超出能分配的最大值；
+  - 调用 runtime.fastrand 获取一个随机的哈希种子；
+  - 根据传入的 hint 计算出需要的最小需要的桶的数量；
+  - 使用 runtime.makeBucketArray 创建用于保存桶的数组；</p>
+<h3 id="key">key 访问</h3>
+<p><img alt="hashmap-mapaccess" src="https://img.draveness.me/2020-10-18-16030322432560/hashmap-mapaccess.png" /></p>
+<pre><code class="language-go">func mapaccess1(t *maptype, h *hmap, key unsafe.Pointer) unsafe.Pointer {
+    alg := t.key.alg
+  // 计算哈希
+    hash := alg.hash(key, uintptr(h.hash0))
+  // 获取
+    m := bucketMask(h.B)
+  // 拿到hash到的桶
+    b := (*bmap)(add(h.buckets, (hash&amp;m)*uintptr(t.bucketsize)))
+    top := tophash(hash)
+bucketloop:
+  // 在bmap和overflow 中找到对应的key
+    for ; b != nil; b = b.overflow(t) {
+        for i := uintptr(0); i &lt; bucketCnt; i++ {
+            if b.tophash[i] != top {
+                if b.tophash[i] == emptyRest {
+                    break bucketloop
+                }
+                continue
+            }
+            k := add(unsafe.Pointer(b), dataOffset+i*uintptr(t.keysize))
+            if alg.equal(key, k) {
+                v := add(unsafe.Pointer(b), dataOffset+bucketCnt*uintptr(t.keysize)+i*uintptr(t.valuesize))
+                return v
+            }
+        }
+    }
+    return unsafe.Pointer(&amp;zeroVal[0])
+}
+</code></pre>
+<h2 id="_11">扩容(渐进)</h2>
+<p>在扩容期间访问哈希表时会使用旧桶，向哈希表写入数据时会触发旧桶元素的分流。除了这种正常的扩容之外，为了解决大量写入、删除造成的内存泄漏问题，哈希引入了 <code>sameSizeGrow</code> 这一机制，在出现较多溢出桶时会整理哈希的内存减少空间的占用。</p>
+<p><a href="https://github.com/golang/go/commit/9980b70cb460f27907a003674ab1b9bea24a847c">runtime: limit the number of map overflow buckets</a> 引入了 <code>sameSizeGrow</code> 通过复用已有的哈希扩容机制解决该问题，一旦哈希中出现了过多的溢出桶，它会创建新桶保存数据，垃圾回收会清理老的溢出桶并释放内存<a href="https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/#fn:5">5</a>。</p>
+<p>随着键值对数量的增加，溢出桶的数量和哈希的装载因子也会逐渐升高，超过一定范围就会触发扩容，扩容会将桶的数量翻倍，元素再分配的过程也是在调用写操作时增量进行的，不会造成性能的瞬时巨大抖动。</p>
+<h2 id="_12">三.字符串</h2>
 <blockquote>
-<p>只读的类型
+<p>只读的类型s
 做拼接和类型转换等操作时一定要注意性能的损耗</p>
 </blockquote>
 <pre><code class="language-go">type StringHeader struct {
