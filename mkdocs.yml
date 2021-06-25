@@ -23,7 +23,7 @@ nav:
   - Kubernetes:
     - 容器持久化存储: post/k8s/容器持久化存储.md
   - 中间件:
-    - gprc 设计实现: post/中间件/gprc 实现原理.md
+    - gprc 设计实现: post/中间件/gprc实现原理.md
   - 架构:
     - 项目架构设计经验: post/架构/项目架构设计经验.md
     - 常见系统设计问题: post/架构/常见系统设计问题.md
